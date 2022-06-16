@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     /* background: hsl(0 0% 5% / .1); */
     color: white !important;
-    background: radial-gradient(ellipse at 33% -25%, #0e3489 25%, #880011 83.6%);
+    background: #000a0e;
   }
 
   :root {
@@ -29,7 +29,6 @@ const GlobalStyle = createGlobalStyle`
     @media screen and (max-width: 425px) {
       font-size: 12px;
     }
-    /* background: radial-gradient(ellipse at 33% -25%, #0e3489 25%, #880011 83.6%); */
   }
 
   html, body, div, span, applet, object, iframe,
