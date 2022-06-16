@@ -8,3 +8,4 @@ This project is designed to highlight and emphasize my stregths and experience a
 - styled-components (compiled css/sass framework for modular styling and theming)
 - styled-system (custom component props for inline style adjustments and polymorphic component fuctionality)
 - framer-motion (performant custom animation and gestures)
+- react-router-dom
