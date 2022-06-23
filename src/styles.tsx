@@ -2,9 +2,10 @@ import { motion } from 'framer-motion';
 import styled, { createGlobalStyle } from 'styled-components/macro'
 import { flexbox, FlexboxProps, space, SpaceProps } from 'styled-system';
 
-export const FlexColumn = styled(motion.div) <SpaceProps & FlexboxProps & { width?: string }>`
+export const FlexColumn = styled(motion.div) <SpaceProps & FlexboxProps & { width?: string, height?: string }>`
   display: flex;
   width: ${({ width }) => width ? width : "100%"};
+  height: ${({ height }) => height ? height : "auto"};
   flex-direction: column;
   justify-content: center;
   align-items: center;
