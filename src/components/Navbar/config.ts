@@ -1,5 +1,7 @@
 import { NavItemsType } from "./types";
 
+export const MENU_HEIGHT = "2rem"
+
 export const links: NavItemsType[] = [
     {
         label: "About",
