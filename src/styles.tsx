@@ -1,4 +1,29 @@
-import { createGlobalStyle } from 'styled-components'
+import { motion } from 'framer-motion';
+import styled, { createGlobalStyle } from 'styled-components/macro'
+import { flexbox, FlexboxProps, space, SpaceProps } from 'styled-system';
+
+export const FlexColumn = styled(motion.div) <SpaceProps & FlexboxProps & { width?: string }>`
+  display: flex;
+  width: ${({ width }) => width ? width : "100%"};
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  ${space}
+  ${flexbox}
+`
+
+export const FlexRow = styled(motion.div) <SpaceProps & FlexboxProps & { height?: string }>`
+  display: flex;
+  width: 100%;
+  height: ${({ height }) => height ? height : "auto"};
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  ${space}
+  ${flexbox}
+`
 
 const GlobalStyle = createGlobalStyle`
   
@@ -20,7 +45,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     /* background: hsl(0 0% 5% / .1); */
     color: white !important;
-    background: #000a0e;
+    background: #020305;
   }
 
   :root {
