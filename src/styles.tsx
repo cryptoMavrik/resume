@@ -26,6 +26,31 @@ export const FlexRow = styled(motion.div) <SpaceProps & FlexboxProps & { height?
   ${flexbox}
 `
 
+export const Heading = styled(motion.h2) <{ scale?: "sm" | "md" | "lg", color?: string, opacity?: string } & SpaceProps>`
+  color: ${({ color }) => color ? color : "#f3f3f3"};
+  font-size: ${({ scale }) => scale === "sm" ? "1.5rem" : scale === "lg" ? "3.5rem" : "2.25rem"};
+  font-weight: ${({ scale }) => scale === "sm" ? "500" : scale === "lg" ? "700" : "600"};
+  text-align: left;
+  opacity: ${({ opacity }) => opacity ? opacity : "1"};
+
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background: linear-gradient(117deg, #53d3f3, #90ddc9);
+    color: ${({ color }) => color ? color : "transparent"};
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  ${space}
+`
+
+export const Text = styled(motion.p) <{ scale?: "sm" | "md" } & SpaceProps>`
+  color: #f3f3f3;
+  font-size: ${({ scale }) => scale === "sm" ? "1.1rem" : "1.25rem"};
+  font-weight: 300;
+
+  ${space}
+`
+
 const GlobalStyle = createGlobalStyle`
   
   *::before,
@@ -39,13 +64,12 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
   }
 
   body {
     /* background: hsl(0 0% 5% / .1); */
     color: white !important;
+    /* background: white; */
     background: #020305;
   }
 
