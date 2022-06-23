@@ -28,8 +28,8 @@ export const FlexRow = styled(motion.div) <SpaceProps & FlexboxProps & { height?
 
 export const Heading = styled(motion.h2) <{ scale?: "sm" | "md" | "lg", color?: string, opacity?: string } & SpaceProps>`
   color: ${({ color }) => color ? color : "#f3f3f3"};
-  font-size: ${({ scale }) => scale === "sm" ? "1.5rem" : scale === "lg" ? "3.5rem" : "2.25rem"};
-  font-weight: ${({ scale }) => scale === "sm" ? "500" : scale === "lg" ? "700" : "600"};
+  font-size: ${({ scale }) => scale === "sm" ? "1.75rem" : scale === "lg" ? "3.5rem" : "2.5rem"};
+  font-weight: ${({ scale }) => scale === "sm" ? "500" : scale === "lg" ? "900" : "700"};
   text-align: left;
   opacity: ${({ opacity }) => opacity ? opacity : "1"};
 
@@ -44,14 +44,13 @@ export const Heading = styled(motion.h2) <{ scale?: "sm" | "md" | "lg", color?: 
 `
 
 export const Text = styled(motion.p) <{ scale?: "sm" | "md" } & SpaceProps>`
-  color: #f3f3f3;
+  color: #dfdfdf;
   font-size: ${({ scale }) => scale === "sm" ? "1.1rem" : "1.25rem"};
-  font-weight: 400;
+  font-weight: 300;
   transition: opacity 250ms ease;
 
   &:hover:not(:active) {
     opacity: .75;
-    color: #fff;
   }
 
   ${space}
@@ -77,6 +76,7 @@ const GlobalStyle = createGlobalStyle`
     color: white !important;
     /* background: white; */
     background: #020305;
+    font-family: 'Roboto', sans-serif;
   }
 
   :root {
