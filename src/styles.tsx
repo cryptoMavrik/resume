@@ -46,7 +46,13 @@ export const Heading = styled(motion.h2) <{ scale?: "sm" | "md" | "lg", color?: 
 export const Text = styled(motion.p) <{ scale?: "sm" | "md" } & SpaceProps>`
   color: #f3f3f3;
   font-size: ${({ scale }) => scale === "sm" ? "1.1rem" : "1.25rem"};
-  font-weight: 300;
+  font-weight: 400;
+  transition: opacity 250ms ease;
+
+  &:hover:not(:active) {
+    opacity: .75;
+    color: #fff;
+  }
 
   ${space}
 `
