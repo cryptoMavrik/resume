@@ -12,15 +12,18 @@ export const Wrapper = styled(FlexColumn)`
 
 export const StyledNavBar = styled(FlexColumn)`
     z-index: 100;
-    height: ${MENU_HEIGHT}px;
+    height: ${MENU_HEIGHT};
+    margin-bottom: -${MENU_HEIGHT};
     justify-content: space-between;
-    padding: 0 2rem;
+    padding: 1rem 0;
 `
 
 export const NavItem = styled(Link) <SpaceProps & { $isActive?: boolean }>`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 1.5rem;
-    color: ${({ $isActive }) => $isActive ? "blue" : "white"};
+    padding: 1rem 2.25rem;
+    color: ${({ $isActive }) => $isActive ? "#53d3f3" : "white"};
+    font-size: 1.2rem;
+    transition: color 200ms;
 `

@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { useLocation } from 'react-router-dom'
 import { FlexColumn, FlexRow } from '../../styles'
-import { links } from './config'
+import { links, MENU_HEIGHT } from './config'
 import { NavItem, StyledNavBar, Wrapper } from './styles'
 import { NavMenuProps } from './types'
 
@@ -27,7 +27,7 @@ const NavMenu: React.FC<NavMenuProps> = ({
                 </FlexRow>
             </StyledNavBar>
             <FlexColumn height='100%'>
-                <FlexRow>
+                <FlexRow height={`calc(100vh - ${MENU_HEIGHT})`}>
                     {children}
                 </FlexRow>
             </FlexColumn>
