@@ -7,5 +7,5 @@ This project is designed to highlight and emphasize my strengths and experience 
 - CRA Typescript template
 - styled-components (compiled css/sass framework for modular styling and theming)
 - styled-system (custom component props for inline style adjustments and polymorphic component functionality)
-- framer-motion (performant custom animation and gestures)
+- framer-motion (performant custom animations and gestures)
 - react-router-dom
