@@ -8,7 +8,8 @@ import { NavItemsProps } from "./types";
 
 export const Wrapper = styled(FlexColumn)`
   position: relative;
-  background: hsl(0 0% 0% / .5);
+  background: hsl(0 0% 0% / .45);
+  -webkit-background-filter: blur(3rem); 
   overflow: hidden;
   `;
 

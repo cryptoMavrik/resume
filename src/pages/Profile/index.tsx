@@ -7,7 +7,7 @@ const Profile = () => {
     return (
         <Container>
             <FlexRow>
-                <FlexColumn flexBasis={"60%"} justifyContent="flex-start" alignItems="flex-start" px="3rem">
+                <FlexColumn flexBasis={"54%"} justifyContent="flex-start" alignItems="flex-start" px="3rem">
                     <Heading scale='lg'>
                         Web3/React Developer
                     </Heading>
