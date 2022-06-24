@@ -3,7 +3,7 @@ import pawn from "../../assets/pawn.png"
 import kingdoms from "../../assets/kingdoms.png"
 import kindred from "../../assets/kh_heart_logo.png"
 import nftylabs from "../../assets/nftylabs.png"
-import nftynetwork from "../../assets/nftynetwork.svg"
+import nftynetwork from "../../assets/nftynetwork.png"
 import overwatch from "../../assets/overwatch.png"
 import women from "../../assets/WotW.png"
 

@@ -2,6 +2,7 @@ import React from 'react'
 import { FlexColumn, FlexRow, Heading, Text } from '../../styles'
 import { Container, SkillBox } from './styles'
 import Tilt from 'react-parallax-tilt';
+import { skills1, skills2 } from './config';
 
 const Profile = () => {
     return (
@@ -22,71 +23,22 @@ const Profile = () => {
                         </Heading>
                         <FlexRow alignItems={"flex-start"} m="2rem">
                             <FlexColumn alignItems={"flex-start"} justifyContent={"flex-start"} pl="2rem">
-                                <Text>
-                                    • HTML
-                                </Text>
-                                <Text>
-                                    • CSS/SCSS
-                                </Text>
-                                <Text>
-                                    • Typescript
-                                </Text>
-                                <Text>
-                                    • React
-                                </Text>
-                                <Text>
-                                    • NextJS
-                                </Text>
-                                <Text>
-                                    • Solidity
-                                </Text>
-                                <Text>
-                                    • Python
-                                </Text>
-                                <Text>
-                                    • GraphQL
-                                </Text>
-                                <Text>
-                                    • ERC20 Swap interface
-                                </Text>
-                                <Text>
-                                    • ERC721 Collections
-                                </Text>
-                                <Text>
-                                    • ERC721 Marketplace
-                                </Text>
+                                {skills1.map((el, index) => {
+                                    return (
+                                        <Text key={index}>
+                                            {`• ${el}`}
+                                        </Text>
+                                    )
+                                })}
                             </FlexColumn>
-                            <FlexColumn alignItems={"flex-start"} justifyContent={"flex-start"}>
-                                <Text>
-                                    • Trading View Integration
-                                </Text>
-                                <Text>
-                                    • ERC1155 Staking
-                                </Text>
-                                <Text>
-                                    • ERC20 Launchpad
-                                </Text>
-                                <Text>
-                                    • Token stream interface
-                                </Text>
-                                <Text>
-                                    • Token Pre-sale interface
-                                </Text>
-                                <Text>
-                                    • Arbitrage Bots
-                                </Text>
-                                <Text>
-                                    • Chain-agnostic Protocols
-                                </Text>
-                                <Text>
-                                    • Swap Aggregation
-                                </Text>
-                                <Text>
-                                    • Wallet integration
-                                </Text>
-                                <Text>
-                                    • EVM HD Wallets
-                                </Text>
+                            <FlexColumn alignItems={"flex-start"} justifyContent={"flex-start"} pl="2rem">
+                                {skills2.map((el, index) => {
+                                    return (
+                                        <Text key={index}>
+                                            {`• ${el}`}
+                                        </Text>
+                                    )
+                                })}
                             </FlexColumn>
                         </FlexRow>
                     </SkillBox>
