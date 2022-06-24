@@ -28,7 +28,7 @@ export const FlexRow = styled(motion.div) <SpaceProps & FlexboxProps & { height?
 
 export const Heading = styled(motion.h2) <{ scale?: "sm" | "md" | "lg", color?: string, opacity?: string } & SpaceProps>`
   color: ${({ color }) => color ? color : "#f3f3f3"};
-  font-size: ${({ scale }) => scale === "sm" ? "1.75rem" : scale === "lg" ? "3.5rem" : "2.5rem"};
+  font-size: ${({ scale }) => scale === "sm" ? "1.3rem" : scale === "lg" ? "3.5rem" : "2.5rem"};
   font-weight: ${({ scale }) => scale === "sm" ? "500" : scale === "lg" ? "900" : "700"};
   text-align: left;
   opacity: ${({ opacity }) => opacity ? opacity : "1"};
@@ -45,7 +45,7 @@ export const Heading = styled(motion.h2) <{ scale?: "sm" | "md" | "lg", color?: 
 
 export const Text = styled(motion.p) <{ scale?: "sm" | "md" } & SpaceProps>`
   color: #dfdfdf;
-  font-size: ${({ scale }) => scale === "sm" ? "1.1rem" : "1.25rem"};
+  font-size: ${({ scale }) => scale === "sm" ? ".85rem" : "1.25rem"};
   font-weight: 500;
   transition: opacity 250ms ease;
 
@@ -72,9 +72,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    /* background: hsl(0 0% 5% / .1); */
-    color: white !important;
-    /* background: darkblue; */
+    overflow-x: hidden;
     background: #050710;
     font-family: 'Roboto', sans-serif;
   }
