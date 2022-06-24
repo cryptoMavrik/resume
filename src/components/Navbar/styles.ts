@@ -27,6 +27,7 @@ export const NavItem = styled(Link) <SpaceProps & { $isActive?: boolean }>`
   align-items: center;
   padding: 0.5rem 2.25rem;
   color: ${({ $isActive }) => ($isActive ? "#90ddf9" : "#d9d9d9")};
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
   transition: color 500ms;
 `;

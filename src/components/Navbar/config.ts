@@ -4,15 +4,15 @@ export const MENU_HEIGHT = "1rem"
 
 export const links: NavItemsType[] = [
     {
-        label: "Profile",
+        label: "PROFILE",
         href: "/profile"
     },
     {
-        label: "Portfolio",
+        label: "PORTFOLIO",
         href: "/portfolio"
     },
     {
-        label: "Contact",
+        label: "CONTACT",
         href: "/contact"
     },
 
