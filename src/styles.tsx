@@ -46,7 +46,7 @@ export const Heading = styled(motion.h2) <{ scale?: "sm" | "md" | "lg", color?: 
 export const Text = styled(motion.p) <{ scale?: "sm" | "md" } & SpaceProps>`
   color: #dfdfdf;
   font-size: ${({ scale }) => scale === "sm" ? "1.1rem" : "1.25rem"};
-  font-weight: 300;
+  font-weight: 500;
   transition: opacity 250ms ease;
 
   &:hover:not(:active) {
@@ -74,8 +74,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     /* background: hsl(0 0% 5% / .1); */
     color: white !important;
-    /* background: white; */
-    background: #020305;
+    /* background: darkblue; */
+    background: #050710;
     font-family: 'Roboto', sans-serif;
   }
 
