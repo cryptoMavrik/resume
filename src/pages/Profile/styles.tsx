@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components/macro";
+import { MENU_HEIGHT } from "../../components/Navbar/config";
 import { FlexColumn } from "../../styles";
 
 export const Container = styled(motion.div)`
@@ -7,7 +8,9 @@ export const Container = styled(motion.div)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem 9%;
+    min-height: calc(100vh + ${MENU_HEIGHT}); 
+    margin-top: -5rem;
+    padding: 0 9%;
 `
 
 export const SkillBox = styled(FlexColumn)`

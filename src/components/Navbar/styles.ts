@@ -9,17 +9,21 @@ import { NavItemsProps } from "./types";
 export const Wrapper = styled(FlexColumn)`
   position: relative;
   background: hsl(0 0% 0% / .45);
-  -webkit-background-filter: blur(3rem); 
   overflow: hidden;
   `;
 
 export const StyledNavBar = styled(FlexColumn)`
-  position: relative;
+  background: hsl(0 0% 0% / .75);
   z-index: 100;
   height: ${MENU_HEIGHT};
-  margin-bottom: -${MENU_HEIGHT};
   justify-content: space-between;
   padding: 1rem 0;
+
+  @supports (-webkit-backdrop-filter: blur(3rem)) or (backdrop-filter: blur(3rem))  {
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    background: hsl(0 0% 0% / .1);
+  }
 `;
 
 export const NavItem = styled(Link) <SpaceProps & { $isActive?: boolean }>`

@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { useLocation } from 'react-router-dom'
+import { Bubble1, Bubble2, Bubble3 } from '../../App'
 import { FlexColumn, FlexRow } from '../../styles'
 import { links, MENU_HEIGHT } from './config'
 import { NavItem, StyledNavBar, Wrapper } from './styles'
@@ -12,8 +13,10 @@ const NavMenu: React.FC<NavMenuProps> = ({
 
     return (
         <Wrapper>
+            <Bubble1 top={"0%"} left={"25%"} />
+            <Bubble2 top={"10%"} left={"5%"} />
+            <Bubble3 top={"5%"} left={"35%"} />
             <StyledNavBar>
-                <div></div>
                 <FlexRow>
                     {
                         links.map(({ label, href }, index) => {
@@ -26,8 +29,8 @@ const NavMenu: React.FC<NavMenuProps> = ({
                     }
                 </FlexRow>
             </StyledNavBar>
-            <FlexColumn height='100%'>
-                <FlexRow height={`calc(100vh - ${MENU_HEIGHT})`}>
+            <FlexColumn>
+                <FlexRow>
                     {children}
                 </FlexRow>
             </FlexColumn>
