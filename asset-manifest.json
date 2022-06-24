@@ -1,10 +1,16 @@
 {
   "files": {
-    "main.js": "/resume/static/js/main.667e847d.js",
+    "main.js": "/resume/static/js/main.9545f25f.js",
     "static/js/27.db6db9e3.chunk.js": "/resume/static/js/27.db6db9e3.chunk.js",
+    "static/media/WotW.png": "/resume/static/media/WotW.0292c2c5b6f691138162.png",
+    "static/media/overwatch.png": "/resume/static/media/overwatch.8ecff5096def346b0233.png",
+    "static/media/nftylabs.png": "/resume/static/media/nftylabs.b924ac15c93e22b186aa.png",
+    "static/media/kingdoms.png": "/resume/static/media/kingdoms.44591887af91b01e8626.png",
+    "static/media/nftynetwork.svg": "/resume/static/media/nftynetwork.638e0a146221e3515f750e922469b00c.svg",
+    "static/media/kh_heart_logo.png": "/resume/static/media/kh_heart_logo.bf59addd0bb83c8cc475.png",
     "index.html": "/resume/index.html"
   },
   "entrypoints": [
-    "static/js/main.667e847d.js"
+    "static/js/main.9545f25f.js"
   ]
 }
