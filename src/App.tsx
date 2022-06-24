@@ -55,7 +55,7 @@ function App() {
     <NavMenu>
       <Bubble1 top={"0%"} left={"25%"} />
       <Bubble2 top={"10%"} left={"5%"} />
-      <Bubble3 left={"35%"} />
+      <Bubble3 top={"5%"} left={"35%"} />
       <Routes>
         <Route path='/' element={<Navigate to={"/profile"} />} />
         <Route path='/profile' element={<Profile />} />
