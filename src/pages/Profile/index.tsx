@@ -22,69 +22,69 @@ const Profile = () => {
                         </Heading>
                         <FlexRow alignItems={"flex-start"} m="2rem">
                             <FlexColumn alignItems={"flex-start"} justifyContent={"flex-start"} pl="2rem">
-                                <Text scale='sm'>
+                                <Text>
                                     • HTML
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • CSS/SCSS
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • Typescript
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • React
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • NextJS
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • Solidity
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • Python
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • GraphQL
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • ERC20 Swap interface
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • ERC721 Collections
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • ERC721 Marketplace
                                 </Text>
                             </FlexColumn>
                             <FlexColumn alignItems={"flex-start"} justifyContent={"flex-start"}>
-                                <Text scale='sm'>
+                                <Text>
                                     • Trading View Integration
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • ERC1155 Staking
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • ERC20 Launchpad
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • Token stream interface
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • Token Pre-sale interface
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • Arbitrage Bots
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • Chain-agnostic Protocols
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • Swap Aggregation
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • Wallet integration
                                 </Text>
-                                <Text scale='sm'>
+                                <Text>
                                     • EVM HD Wallets
                                 </Text>
                             </FlexColumn>

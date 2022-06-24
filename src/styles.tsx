@@ -43,9 +43,9 @@ export const Heading = styled(motion.h2) <{ scale?: "sm" | "md" | "lg", color?: 
   ${space}
 `
 
-export const Text = styled(motion.p) <{ scale?: "sm" | "md" } & SpaceProps>`
+export const Text = styled(motion.p) <{ scale?: "sm" | "md" | "lg" } & SpaceProps>`
   color: #dfdfdf;
-  font-size: ${({ scale }) => scale === "sm" ? ".85rem" : "1.25rem"};
+  font-size: ${({ scale }) => scale === "sm" ? ".85rem" : scale === "lg" ? "1.25rem" : "1.1rem"};
   font-weight: 500;
   transition: opacity 250ms ease;
 
