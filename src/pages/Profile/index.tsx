@@ -1,14 +1,14 @@
 import React from 'react'
 import { FlexColumn, FlexRow, Heading, Text } from '../../styles'
-import { Container, SkillBox } from './styles'
+import { Container, SkillBox, Wrapper } from './styles'
 import Tilt from 'react-parallax-tilt';
 import { skills1, skills2 } from './config';
 
 const Profile = () => {
     return (
         <Container>
-            <FlexRow>
-                <FlexColumn flexBasis={"54%"} justifyContent="flex-start" alignItems="flex-start" px="3rem">
+            <Wrapper>
+                <FlexColumn flexBasis={"60%"} justifyContent="flex-start" alignItems="flex-start" px="3rem">
                     <Heading scale='lg'>
                         Web3/React Developer
                     </Heading>
@@ -17,7 +17,7 @@ const Profile = () => {
                     </Text>
                 </FlexColumn>
                 <Tilt tiltReverse scale={1.1} tiltMaxAngleX={10} tiltMaxAngleY={10}>
-                    <SkillBox px="2rem">
+                    <SkillBox px="5rem">
                         <Heading>
                             Skills
                         </Heading>
@@ -43,7 +43,7 @@ const Profile = () => {
                         </FlexRow>
                     </SkillBox>
                 </Tilt>
-            </FlexRow>
+            </Wrapper>
         </Container >
     )
 }

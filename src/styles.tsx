@@ -80,7 +80,7 @@ const GlobalStyle = createGlobalStyle`
   :root {
     font-size: 16px;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 500px) {
       font-size: 12px;
     }
   }

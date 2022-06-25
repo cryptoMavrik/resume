@@ -19,6 +19,10 @@ export const EmailForm = styled(FlexColumn)`
     padding: 2rem 4rem;
     border-radius: 2rem;
     width: 100%;
+    @media screen and (max-width: 425px) {
+        width: 95%;
+        padding: 2rem;
+    }
 `
 
 export const Input = styled(motion.input)`
@@ -30,6 +34,7 @@ export const Input = styled(motion.input)`
     padding: .5rem 1rem;
     margin: 1rem 0;
 `
+
 export const TextArea = styled(motion.textarea)`
     background: hsl(0 0% 0% / .25);
     color: #f3f3f3;
@@ -41,9 +46,10 @@ export const TextArea = styled(motion.textarea)`
 `
 
 export const SubmitButton = styled(motion.input)`
-    background: hsl(165 50% 50% / .75);
-    color: #f3f3f3;
+    background: #40c0d0cc;
+    color: #fefefe;
     border-radius: 8px;
+    font-weight: 700;
     width: 300px;
     padding: 1rem;
     margin: 1rem 0;

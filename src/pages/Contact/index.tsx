@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
                             type="text"
                             value={name}
                             required
-                            placeholder="Name"
+                            placeholder="Your name"
                             name="from_name"
                         />
                         <Input
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
                             type="text"
                             value={email}
                             required
-                            placeholder="Email"
+                            placeholder="Your email"
                             name="reply_to"
                         />
                         <TextArea
@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
                             value={message}
                             required
                             placeholder="Message"
-                            name="message_html"
+                            name="message"
                         />
                         <SubmitButton type="button" value="Submit" onClick={handleSubmit} />
                     </FlexColumn>

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components/macro";
 import { MENU_HEIGHT } from "../../components/Navbar/config";
-import { FlexColumn } from "../../styles";
+import { FlexColumn, FlexRow } from "../../styles";
 
 export const Container = styled(motion.div)`
     display: flex;
@@ -11,6 +11,18 @@ export const Container = styled(motion.div)`
     min-height: calc(100vh + ${MENU_HEIGHT}); 
     margin-top: -5rem;
     padding: 0 9%;
+    @media screen and (max-width: 1025px) {
+        padding: 0 5%;
+        margin-top: 0;
+}
+`
+
+export const Wrapper = styled(FlexRow)`
+    @media screen and (max-width: 1025px) {
+        flex-direction: column;
+        gap: 4rem;
+        padding: 0 4rem;
+    }
 `
 
 export const SkillBox = styled(FlexColumn)`

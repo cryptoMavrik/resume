@@ -15,6 +15,22 @@ export const CardGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    @media screen and (max-width: 1025px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    @media screen and (max-width: 769px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    @media screen and (max-width: 426px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    @media screen and (max-width: 376px) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
 `
 
 export const ImageWrapper = styled.div`
