@@ -12,7 +12,7 @@ const Profile = () => {
                     <Heading scale='lg'>
                         Web3/React Developer
                     </Heading>
-                    <Text p="1rem 0rem">
+                    <Text p="1rem 0rem" scale='lg'>
                         Passionate and performance-driven React developer with a strong emphasis on current and future blockchain technologies. Over 5 years of experience developing applications for EVM-like blockchains and Developer/Moderator for the Aquachain Foundation.
                     </Text>
                 </FlexColumn>

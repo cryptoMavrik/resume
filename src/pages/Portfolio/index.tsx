@@ -14,7 +14,7 @@ const Portfolio = () => {
             <CardGrid>
                 {sites.map(({ href, title, image, description }, index) => {
                     return (
-                        <a href={href} target={"_blank"} rel="noreferrer" >
+                        <a href={href} target={"_blank"} rel="noreferrer" key={index}>
                             <PortfolioCard justifyContent={"flex-start"}>
                                 <ImageWrapper>
                                     <CardImage
