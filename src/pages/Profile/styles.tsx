@@ -26,8 +26,23 @@ export const Wrapper = styled(FlexRow)`
       flex-direction: column;
       gap: 4rem;
       padding: 0 4rem;
-    }
-    `;
+  }
+  @media screen and (max-width: 1025px) {
+      flex-direction: column;
+      gap: 4rem;
+      padding: 0 2rem;
+  }
+`;
+
+export const Header = styled(FlexColumn)`
+  padding: 0 3rem;
+  @media screen and (max-width: 1025px) {
+      padding: 0 1rem;
+  }
+  @media screen and (max-width: 768px) {
+      padding: 0;
+  }
+`;
 
 export const SkillBox = styled(FlexColumn)`
   background: hsl(0 0% 0% / 0.45);

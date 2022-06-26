@@ -1,6 +1,6 @@
 import React from 'react'
 import { FlexColumn, FlexRow, Heading, Text } from '../../styles'
-import { Container, SkillBox, Wrapper } from './styles'
+import { Container, Header, SkillBox, Wrapper } from './styles'
 import Tilt from 'react-parallax-tilt';
 import { skills1, skills2 } from './config';
 
@@ -8,7 +8,7 @@ const Profile = () => {
     return (
         <Container>
             <Wrapper>
-                <FlexColumn
+                <Header
                     flexBasis={"60%"}
                     justifyContent="flex-start"
                     alignItems="flex-start"
@@ -45,7 +45,7 @@ const Profile = () => {
                         }}>
                         Passionate and performance-driven React developer with a strong emphasis on current and future blockchain technologies. Over 5 years of experience developing applications for EVM-like blockchains and Developer/Moderator for the Aquachain Foundation.
                     </Text>
-                </FlexColumn>
+                </Header>
                 <Tilt tiltReverse scale={1.1} tiltMaxAngleX={10} tiltMaxAngleY={10}>
                     <SkillBox
                         initial={{
