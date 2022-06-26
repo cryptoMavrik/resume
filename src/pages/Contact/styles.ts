@@ -37,6 +37,7 @@ export const Input = styled(motion.input)`
 
 export const TextArea = styled(motion.textarea)`
     background: hsl(0 0% 0% / .25);
+    font-family: "Roboto";
     color: #f3f3f3;
     border: 2px solid #a2a2a2;
     border-radius: 8px;
@@ -46,6 +47,7 @@ export const TextArea = styled(motion.textarea)`
 `
 
 export const SubmitButton = styled(motion.input)`
+    cursor: pointer;
     background: #40c0d0cc;
     color: #fefefe;
     border-radius: 8px;
@@ -53,4 +55,9 @@ export const SubmitButton = styled(motion.input)`
     width: 300px;
     padding: 1rem;
     margin: 1rem 0;
+
+    &:disabled {
+        opacity: .5;
+        cursor: not-allowed;
+    }
 `

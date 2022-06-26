@@ -70,9 +70,9 @@ export const Heading = styled(motion.h2) <
 `;
 
 export const Text = styled(motion.p) <
-  { scale?: "sm" | "md" | "lg" } & SpaceProps
+  { scale?: "sm" | "md" | "lg", color?: string } & SpaceProps
   >`
-  color: #dfdfdf;
+  color: ${({ color }) => color ? color : "#dfdfdf"};
   font-size: ${({ scale }) =>
     scale === "sm" ? ".85rem" : scale === "lg" ? "1.25rem" : "1.1rem"};
   font-weight: 500;

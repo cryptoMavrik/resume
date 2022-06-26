@@ -9,6 +9,8 @@ const Contact: React.FC = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
+
+    const [isSending, setIsSending] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
     const [isFail, setIsFail] = useState(false)
     const handleSuccess = () => {
@@ -16,17 +18,20 @@ const Contact: React.FC = () => {
         setTimeout(() => {
             setIsSuccess(false)
         }, 3000)
+        setIsSending(false)
     }
     const handleFail = () => {
         setIsFail(true)
         setTimeout(() => {
             setIsFail(false)
         }, 3000)
+        setIsSending(false)
     }
 
 
     const handleSubmit = () => {
         setIsSuccess(false)
+        setIsSending(true)
         emailjs.sendForm("service_6dt2fbh", "template_6ezaths", "#email_form")
             .then((res) => {
                 handleSuccess()
@@ -63,6 +68,7 @@ const Contact: React.FC = () => {
                             type="text"
                             value={name}
                             required
+                            autoComplete="off"
                             placeholder="Your name"
                             name="from_name"
                         />
@@ -71,6 +77,7 @@ const Contact: React.FC = () => {
                             type="text"
                             value={email}
                             required
+                            autoComplete="off"
                             placeholder="Your email"
                             name="reply_to"
                         />
@@ -78,18 +85,19 @@ const Contact: React.FC = () => {
                             onChange={(e) => setMessage(e.target.value)}
                             value={message}
                             required
+                            autoComplete="off"
                             placeholder="Message"
                             name="message"
                         />
-                        <SubmitButton type="button" value="Submit" onClick={handleSubmit} />
+                        <SubmitButton type="button" value="Submit" onClick={handleSubmit} disabled={isSending} />
                     </FlexColumn>
                 </form>
             </EmailForm>
-            <FlexRow>
-                <Text scale="sm">
+            <FlexRow py={"1rem"}>
+                <Text color="green">
                     {isSuccess && "Success"}
                 </Text>
-                <Text scale="sm">
+                <Text color="red">
                     {isFail && "Failed to send"}
                 </Text>
             </FlexRow>
