@@ -175,7 +175,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     overflow-x: hidden;
-    background: #151720;
+    background: #000712;
     font-family: 'Roboto', sans-serif;
   }
 

@@ -15,7 +15,7 @@ const NavMenu: React.FC<NavMenuProps> = ({
         <Wrapper>
             <Bubble1 top={"0%"} left={"35%"} />
             <Bubble2 top={"15%"} left={"5%"} />
-            <Bubble3 top={"5%"} left={"45%"} />
+            <Bubble3 top={"20%"} left={"45%"} />
             <StyledNavBar>
                 <FlexRow>
                     {
