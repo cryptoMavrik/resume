@@ -1,6 +1,8 @@
 export const skills1 = [
     "HTML",
     "CSS/SCSS",
+    "Bootstrap",
+    "TailwindCSS",
     "Typescript",
     "React",
     "NextJS",
@@ -9,10 +11,10 @@ export const skills1 = [
     "GraphQL",
     "ERC20 Swap interface",
     "ERC721 Collections",
-    "ERC721 Marketplace"
 ]
 
 export const skills2 = [
+    "ERC721 Marketplace",
     "Trading View Integration",
     "ERC1155 Staking",
     "ERC20 Launchpad",
