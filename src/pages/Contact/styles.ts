@@ -33,6 +33,10 @@ export const Input = styled(motion.input)`
     width: 325px;
     padding: .5rem 1rem;
     margin: 1rem 0;
+
+    &:active {
+        background: hsl(0 0% 0% / .1);
+    }
 `
 
 export const TextArea = styled(motion.textarea)`
