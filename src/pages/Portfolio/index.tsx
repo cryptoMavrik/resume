@@ -45,7 +45,7 @@ const Portfolio = () => {
                                     <CardImage
                                         src={image}
                                         width={
-                                            title === "NFTY Labs"
+                                            title === "NFTYLabs"
                                                 || title === "Women of the West"
                                                 || title === "Kingdoms Financial" ? "75%" : "60%"} />
                                 </ImageWrapper>

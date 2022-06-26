@@ -71,7 +71,7 @@ export const PortfolioCard = styled(FlexColumn)`
     width: 15rem;
     height: 20rem;
     /* border: 2px solid hsl(180 50% 75% / 1); */
-    border: 2px solid hsl(185 80% 70% / 0.4);
+    /* border: 2px solid hsl(185 80% 70% / 0.4); */
     border-radius: 2rem;
     overflow: hidden;
 `;

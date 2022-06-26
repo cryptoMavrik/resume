@@ -51,12 +51,10 @@ const Contact: React.FC = () => {
         <Container>
             <EmailForm
                 initial={{
-                    y: 300,
                     opacity: 0,
                     scale: .5
                 }}
                 animate={{
-                    y: 0,
                     opacity: 1,
                     scale: 1
                 }}>

@@ -29,7 +29,7 @@ export const sites: PortfolioCardType[] = [
     {
         href: "https://nftylabs.org",
         image: nftylabs,
-        title: "NFTY Labs",
+        title: "NFTYLabs",
         description: "React Front-end"
     },
     {
