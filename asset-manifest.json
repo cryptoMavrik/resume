@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/resume/static/js/main.f9b15afa.js",
+    "main.js": "/resume/static/js/main.f5b80dbc.js",
     "static/js/27.db6db9e3.chunk.js": "/resume/static/js/27.db6db9e3.chunk.js",
-    "static/media/WotW.png": "/resume/static/media/WotW.0292c2c5b6f691138162.png",
-    "static/media/kh_heart_logo.png": "/resume/static/media/kh_heart_logo.828d29bb12b0c7d591f1.png",
-    "static/media/overwatch.png": "/resume/static/media/overwatch.8ecff5096def346b0233.png",
-    "static/media/nftylabs.png": "/resume/static/media/nftylabs.b924ac15c93e22b186aa.png",
-    "static/media/kingdoms.png": "/resume/static/media/kingdoms.44591887af91b01e8626.png",
-    "static/media/nftynetwork.png": "/resume/static/media/nftynetwork.abb63ad1d45554ca48b0.png",
+    "static/media/overwatch.png": "/resume/static/media/overwatch.f1963a22723f0ba7ee7f.png",
+    "static/media/kh_heart_logo.png": "/resume/static/media/kh_heart_logo.59fc55bed3f6768348da.png",
+    "static/media/WotW.png": "/resume/static/media/WotW.cb703496b8ceba9dfb4f.png",
+    "static/media/nftylabs.png": "/resume/static/media/nftylabs.83db1ef56c8bf971f401.png",
+    "static/media/nftynetwork.png": "/resume/static/media/nftynetwork.5c0f677967f2b79a304c.png",
+    "static/media/kingdoms.png": "/resume/static/media/kingdoms.dd6f9172b26b651dbb6e.png",
     "static/media/pawn.png": "/resume/static/media/pawn.fd30eed98449723cadb0.png",
     "index.html": "/resume/index.html"
   },
   "entrypoints": [
-    "static/js/main.f9b15afa.js"
+    "static/js/main.f5b80dbc.js"
   ]
 }
