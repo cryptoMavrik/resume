@@ -15,7 +15,7 @@ export const Container = styled(motion.div)`
 
 export const EmailForm = styled(FlexColumn)`
     background: hsl(0 0% 0% / .45);
-    border: 2px solid hsl(180 50% 75% / 1);
+    border: 2px solid hsl(175 80% 65% / 0.4);
     padding: 2rem 4rem;
     border-radius: 2rem;
     width: 100%;
@@ -48,7 +48,7 @@ export const TextArea = styled(motion.textarea)`
 
 export const SubmitButton = styled(motion.input)`
     cursor: pointer;
-    background: #40c0d0cc;
+    background: hsl(175 80% 50% / 0.75);
     color: #fefefe;
     border-radius: 8px;
     font-weight: 700;

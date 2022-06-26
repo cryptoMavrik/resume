@@ -89,7 +89,12 @@ const Contact: React.FC = () => {
                             placeholder="Message"
                             name="message"
                         />
-                        <SubmitButton type="button" value="Submit" onClick={handleSubmit} disabled={isSending} />
+                        <SubmitButton
+                            type="button"
+                            value="Submit"
+                            onClick={handleSubmit}
+                            disabled={isSending}
+                        />
                     </FlexColumn>
                 </form>
             </EmailForm>

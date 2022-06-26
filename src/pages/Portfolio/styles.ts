@@ -35,21 +35,21 @@ export const CardGrid = styled.div`
 `
 
 export const ImageWrapper = styled.div`
-    background: hsl(0 0% 100% / .1);
+    background: linear-gradient(180deg, hsl(210 50% 75% / .15) 66%, hsl(0 0% 50% / .05));
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-basis: 60%;
     padding: 0 0 .5rem 0;
     overflow: hidden;
-    border-bottom: 2px solid hsl(0 0% 100% / 1);
+    border-bottom: 2px solid hsl(0 0% 100% / .5);
     width: 100%;
     height: 100%;
 `
 
 export const CardImage = styled.img<{ width?: string }>`
     width: ${({ width }) => width ? width : "100%"};
-    margin: 1rem;
+    margin: auto;
     position: relative;
 `
 
@@ -70,7 +70,8 @@ export const PortfolioCard = styled(FlexColumn)`
     background: hsl(0 0% 0% / .25);
     width: 15rem;
     height: 20rem;
-    border: 2px solid hsl(180 50% 75% / 1);
+    /* border: 2px solid hsl(180 50% 75% / 1); */
+    border: 2px solid hsl(185 80% 70% / 0.4);
     border-radius: 2rem;
     overflow: hidden;
 `;

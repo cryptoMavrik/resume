@@ -27,7 +27,7 @@ export const Wrapper = styled(FlexRow)`
 
 export const SkillBox = styled(FlexColumn)`
     background: hsl(0 0% 0% / .45);
-    border: 2px solid hsl(180 50% 75% / 1);
+    border: 4px solid hsl(185 80% 70% / 0.4);
     padding: 1rem .5rem;
     border-radius: 2rem;
     width: 100%;
