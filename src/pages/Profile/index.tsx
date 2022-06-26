@@ -48,7 +48,6 @@ const Profile = () => {
                 </FlexColumn>
                 <Tilt tiltReverse scale={1.1} tiltMaxAngleX={10} tiltMaxAngleY={10}>
                     <SkillBox
-                        px="5rem"
                         initial={{
                             x: 200,
                             opacity: 0,
@@ -70,6 +69,7 @@ const Profile = () => {
                         <FlexRow
                             alignItems={"flex-start"}
                             m="2rem"
+                            px="1rem"
                             initial={{
                                 opacity: 0
                             }}
@@ -78,9 +78,9 @@ const Profile = () => {
                             }}
                             transition={{
                                 delay: 1,
-                                duration: .5
+                                duration: .25
                             }}>
-                            <FlexColumn alignItems={"flex-start"} justifyContent={"flex-start"} pl="2rem">
+                            <FlexColumn alignItems={"flex-start"} justifyContent={"flex-start"}>
                                 {skills1.map((el, index) => {
                                     return (
                                         <Text key={index}>
@@ -89,7 +89,7 @@ const Profile = () => {
                                     )
                                 })}
                             </FlexColumn>
-                            <FlexColumn alignItems={"flex-start"} justifyContent={"flex-start"} pl="2rem">
+                            <FlexColumn alignItems={"flex-start"} justifyContent={"flex-start"}>
                                 {skills2.map((el, index) => {
                                     return (
                                         <Text key={index}>
