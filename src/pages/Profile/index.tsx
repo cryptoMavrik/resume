@@ -8,7 +8,21 @@ const Profile = () => {
     return (
         <Container>
             <Wrapper>
-                <FlexColumn flexBasis={"60%"} justifyContent="flex-start" alignItems="flex-start" px="3rem">
+                <FlexColumn
+                    flexBasis={"60%"}
+                    justifyContent="flex-start"
+                    alignItems="flex-start"
+                    px="3rem"
+                    initial={{
+                        y: 300,
+                        opacity: 0,
+                        scale: .5
+                    }}
+                    animate={{
+                        y: 0,
+                        opacity: 1,
+                        scale: 1
+                    }}>
                     <Heading scale='lg'>
                         Web3/React Developer
                     </Heading>
@@ -17,7 +31,16 @@ const Profile = () => {
                     </Text>
                 </FlexColumn>
                 <Tilt tiltReverse scale={1.1} tiltMaxAngleX={10} tiltMaxAngleY={10}>
-                    <SkillBox px="5rem">
+                    <SkillBox px="5rem" initial={{
+                        y: 200,
+                        opacity: 0,
+                        scale: .5
+                    }}
+                        animate={{
+                            y: 0,
+                            opacity: 1,
+                            scale: 1
+                        }}>
                         <Heading>
                             Skills
                         </Heading>

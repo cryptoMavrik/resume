@@ -6,7 +6,18 @@ import { CardBody, CardGrid, CardHeader, CardImage, Container, ImageWrapper, Por
 const Portfolio = () => {
     return (
         <Container>
-            <FlexRow pb={"4rem"}>
+            <FlexRow
+                pb={"4rem"}
+                initial={{
+                    y: 300,
+                    opacity: 0,
+                    scale: .5
+                }}
+                animate={{
+                    y: 0,
+                    opacity: 1,
+                    scale: 1
+                }}>
                 <Heading>
                     Recent Projects
                 </Heading>
@@ -15,7 +26,17 @@ const Portfolio = () => {
                 {sites.map(({ href, title, image, description }, index) => {
                     return (
                         <a href={href} target={"_blank"} rel="noreferrer" key={index}>
-                            <PortfolioCard justifyContent={"flex-start"}>
+                            <PortfolioCard justifyContent={"flex-start"}
+                                initial={{
+                                    y: 300,
+                                    opacity: 0,
+                                    scale: .5
+                                }}
+                                animate={{
+                                    y: 0,
+                                    opacity: 1,
+                                    scale: 1
+                                }}>
                                 <ImageWrapper>
                                     <CardImage
                                         src={image}

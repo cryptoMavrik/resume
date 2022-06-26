@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { useLocation } from 'react-router-dom'
-import { Bubble1, Bubble2, Bubble3 } from '../../App'
+import { Bubble1, Bubble2, Bubble3 } from '../../styles'
 import { FlexColumn, FlexRow } from '../../styles'
 import { links, MENU_HEIGHT } from './config'
 import { NavItem, StyledNavBar, Wrapper } from './styles'

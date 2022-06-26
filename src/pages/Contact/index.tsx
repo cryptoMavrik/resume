@@ -40,7 +40,17 @@ const Contact: React.FC = () => {
 
     return (
         <Container>
-            <EmailForm>
+            <EmailForm
+                initial={{
+                    y: 300,
+                    opacity: 0,
+                    scale: .5
+                }}
+                animate={{
+                    y: 0,
+                    opacity: 1,
+                    scale: 1
+                }}>
                 <FlexRow py={"1rem"}>
                     <Heading>
                         Contact Me
