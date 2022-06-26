@@ -4,19 +4,19 @@ import { flexbox, FlexboxProps, space, SpaceProps } from "styled-system";
 
 export const bubbleAnimation = keyframes`
     0% {
-          transform: translateY(0px) translateX(0px);
+          transform: translateY(0px) ;
         }
     33.33% {
-          transform: translateY(-20px) translateX(-5px);
+          transform: translateY(-20px);
         }
     50% {
-          transform: translateY(-30px) translateX(-10px);
+          transform: translateY(-30px);
         }
     66.67% {
-          transform: translateY(-15px) translateX(-5px);
+          transform: translateY(-15px);
         }
     100% {
-          transform: translateY(0px) translateX(5px);
+          transform: translateY(0px) ;
         }
 `;
 
