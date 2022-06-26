@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import styled from "styled-components/macro";
+import { MENU_HEIGHT } from "../../components/Navbar/config";
 import { FlexColumn } from "../../styles";
 
 export const Container = styled(motion.div)`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: auto;
+    min-height: calc(100vh + ${MENU_HEIGHT}); 
     align-items: center;
     padding: 5rem 20%;
 `
