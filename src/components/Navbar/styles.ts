@@ -8,7 +8,7 @@ import { NavItemsProps } from "./types";
 
 export const Wrapper = styled(FlexColumn)`
   position: relative;
-  background: hsl(0 0% 0% / .45);
+  /* background: hsl(0 0% 0% / .45); */
   overflow: hidden;
   `;
 

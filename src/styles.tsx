@@ -111,10 +111,16 @@ export const Bubble2 = styled.div<{ top?: string; left?: string }>`
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    hsl(230 80% 65% / 0.4),
-    hsl(230 50% 65% / 0.01) 70%,
+    hsl(245 80% 65% / 0.4),
+    hsl(240 50% 55% / 0.01) 70%,
     transparent 100%
   );
+  /* background: radial-gradient(
+    circle,
+    hsl(210 80% 45% / 0.4),
+    hsl(210 50% 65% / 0.01) 70%,
+    transparent 100%
+  ); */
   height: 45rem;
   width: 45rem;
   top: ${({ top }) => (top ? top : "0")};
@@ -129,10 +135,16 @@ export const Bubble3 = styled.div<{ top?: string; left?: string }>`
   position: absolute;
   z-index: -4;
   border-radius: 50%;
-  background: radial-gradient(
+  /* background: radial-gradient(
     circle,
     hsl(245 80% 65% / 0.4),
     hsl(240 50% 55% / 0.01) 70%,
+    transparent 100%
+  ); */
+  background: radial-gradient(
+    circle,
+    hsl(210 80% 45% / 0.4),
+    hsl(210 50% 65% / 0.01) 70%,
     transparent 100%
   );
   /* background: radial-gradient(circle, hsl(220 50% 50% / .15), hsl(220 40% 50% / .01) 50%, #050710); */
@@ -163,7 +175,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     overflow-x: hidden;
-    background: #050710;
+    background: #151720;
     font-family: 'Roboto', sans-serif;
   }
 

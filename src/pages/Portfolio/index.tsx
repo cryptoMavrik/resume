@@ -36,6 +36,10 @@ const Portfolio = () => {
                                     y: 0,
                                     opacity: 1,
                                     scale: 1
+                                }}
+                                transition={{
+                                    delay: .1 + index * .150,
+                                    type: "tween"
                                 }}>
                                 <ImageWrapper>
                                     <CardImage
