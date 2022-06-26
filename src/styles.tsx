@@ -18,7 +18,7 @@ export const bubbleAnimation = keyframes`
     100% {
           transform: translateY(0px) translateX(5px);
         }
-`
+`;
 
 export const FlexColumn = styled(motion.div) <
   SpaceProps & FlexboxProps & { width?: string; height?: string }
@@ -101,7 +101,7 @@ export const Bubble1 = styled.div<{ top?: string; left?: string }>`
   left: ${({ left }) => (left ? left : "0")};
   animation-name: ${bubbleAnimation};
   animation-iteration-count: infinite;
-  animation-duration: 7500ms;
+  animation-duration: 15000ms;
   animation-delay: 0;
 `;
 
@@ -121,7 +121,7 @@ export const Bubble2 = styled.div<{ top?: string; left?: string }>`
   left: ${({ left }) => (left ? left : "0")};
   animation-name: ${bubbleAnimation};
   animation-iteration-count: infinite;
-  animation-duration: 7500ms;
+  animation-duration: 11500ms;
   animation-delay: 2000ms;
 `;
 
@@ -142,7 +142,7 @@ export const Bubble3 = styled.div<{ top?: string; left?: string }>`
   left: ${({ left }) => (left ? left : "0")};
   animation-name: ${bubbleAnimation};
   animation-iteration-count: infinite;
-  animation-duration: 7500ms;
+  animation-duration: 10000ms;
   animation-delay: 3500ms;
 `;
 
