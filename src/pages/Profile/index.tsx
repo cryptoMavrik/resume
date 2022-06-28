@@ -43,7 +43,7 @@ const Profile = () => {
                             delay: .5,
                             duration: .5
                         }}>
-                        Passionate and performance-driven React developer with a strong emphasis on current and future blockchain technologies. Over 5 years of experience developing applications for EVM-like blockchains and Developer/Moderator for the Aquachain Foundation.
+                        Passionate and performance-driven React developer with a strong emphasis on current and future blockchain technologies. Over 5 years of experience developing applications for EVM-like blockchains, and over 1 year exclusively developing Web3 React dapps.  Developer/Moderator for the Aquachain Foundation.
                     </Text>
                 </Header>
                 <Tilt tiltReverse scale={1.1} tiltMaxAngleX={10} tiltMaxAngleY={10}>
