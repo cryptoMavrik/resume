@@ -1,17 +1,20 @@
 import emailjs from "@emailjs/browser";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import Input from "../../components/Navbar/Input";
 import { useForm } from "../../hooks/useForm";
 import { FlexColumn, FlexRow, Heading, Text } from "../../styles";
-import { Container, EmailForm, Input, SubmitButton, TextArea } from "./styles";
+import { Container, EmailForm, SubmitButton, TextArea } from "./styles";
 
 emailjs.init("NNsqFjJRMcWt4TsU7");
 
 const Contact: React.FC = () => {
     const [isSending, setIsSending] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
+    const [isError, setIsError] = useState(false)
     const [isFail, setIsFail] = useState(false);
 
-    const { values, onChange } = useForm();
+    const { values, setValues, onChange } = useForm();
 
     const handleSuccess = () => {
         setIsSuccess(true);
@@ -34,6 +37,11 @@ const Contact: React.FC = () => {
             handleFail();
             return;
         }
+        if (isError) {
+            handleFail()
+            return
+        }
+
         setIsSuccess(false);
         setIsSending(true);
         emailjs
@@ -46,6 +54,11 @@ const Contact: React.FC = () => {
                 handleFail();
                 console.log("FAILED...", error);
             });
+        setValues({
+            from_name: undefined,
+            reply_to: undefined,
+            message: undefined
+        })
     };
 
     return (
@@ -65,14 +78,7 @@ const Contact: React.FC = () => {
                 </FlexRow>
                 <form id="email_form">
                     <FlexColumn>
-                        <Input
-                            onChange={(e) => onChange(e)}
-                            type="text"
-                            value={values.from_name}
-                            required
-                            autoComplete="off"
-                            placeholder="Your name"
-                            name="from_name"
+                        <motion.div
                             initial={{
                                 opacity: 0,
                             }}
@@ -82,16 +88,19 @@ const Contact: React.FC = () => {
                             transition={{
                                 delay: 0.25,
                                 duration: 0.5,
-                            }}
-                        />
-                        <Input
-                            onChange={(e) => onChange(e)}
-                            type="email"
-                            value={values.reply_to}
-                            required
-                            autoComplete="off"
-                            placeholder="Your email"
-                            name="reply_to"
+                            }}>
+
+                            <Input
+                                onChange={(e) => onChange(e)}
+                                setError={setIsError}
+                                value={values.from_name}
+                                required
+                                autoComplete="off"
+                                label="Name"
+                                name="from_name"
+                            />
+                        </motion.div>
+                        <motion.div
                             initial={{
                                 opacity: 0,
                             }}
@@ -101,10 +110,21 @@ const Contact: React.FC = () => {
                             transition={{
                                 delay: 0.5,
                                 duration: 0.5,
-                            }}
-                        />
+                            }}>
+
+                            <Input
+                                onChange={(e) => onChange(e)}
+                                setError={setIsError}
+                                value={values.reply_to}
+                                required
+                                autoComplete="off"
+                                label="Email address"
+                                name="reply_to"
+                            />
+                        </motion.div>
                         <TextArea
                             onChange={(e) => onChange(e)}
+                            py={".5rem"}
                             value={values.message}
                             required
                             autoComplete="off"
@@ -125,7 +145,8 @@ const Contact: React.FC = () => {
                             type="button"
                             value="Submit"
                             onClick={handleSubmit}
-                            disabled={isSending}
+                            // disabled={true}
+                            disabled={isSending || (!values.from_name || !values.reply_to)}
                             initial={{
                                 opacity: 0,
                             }}
@@ -136,7 +157,9 @@ const Contact: React.FC = () => {
                                 delay: 1.25,
                                 duration: 0.5,
                             }}
-                        />
+                        >
+                            Submit
+                        </SubmitButton>
                     </FlexColumn>
                 </form>
             </EmailForm>

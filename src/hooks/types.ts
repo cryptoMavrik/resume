@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent, Dispatch, SetStateAction } from "react";
 
 export type ContactFormType = {
     from_name?: string;
@@ -8,5 +8,6 @@ export type ContactFormType = {
 
 export type FormReturnType = {
     values: ContactFormType;
+    setValues: Dispatch<SetStateAction<ContactFormType>>
     onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }

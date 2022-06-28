@@ -6,11 +6,10 @@ export const useForm = (): FormReturnType => {
 
     const onChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
-        if (!value) return;
         setValues({
             ...values,
             [name]: value,
         });
     };
-    return { values, onChange };
+    return { values, setValues, onChange };
 };
