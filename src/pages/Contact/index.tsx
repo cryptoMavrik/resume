@@ -1,124 +1,124 @@
-import emailjs from "@emailjs/browser"
-import { useEffect, useState } from "react"
-import { FlexColumn, FlexRow, Heading, Text } from "../../styles"
-import { Container, EmailForm, Input, SubmitButton, TextArea } from "./styles"
+import emailjs from "@emailjs/browser";
+import { useEffect, useState } from "react";
+import { useForm } from "../../hooks/useForm";
+import { FlexColumn, FlexRow, Heading, Text } from "../../styles";
+import { Container, EmailForm, Input, SubmitButton, TextArea } from "./styles";
 
-emailjs.init("NNsqFjJRMcWt4TsU7")
+emailjs.init("NNsqFjJRMcWt4TsU7");
 
 const Contact: React.FC = () => {
-    const [name, setName] = useState<string>()
-    const [email, setEmail] = useState<string>()
-    const [message, setMessage] = useState<string>()
+    const [isSending, setIsSending] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [isFail, setIsFail] = useState(false);
 
-    const [isSending, setIsSending] = useState(false)
-    const [isSuccess, setIsSuccess] = useState(false)
-    const [isFail, setIsFail] = useState(false)
+    const { values, onChange } = useForm();
+
     const handleSuccess = () => {
-        setIsSuccess(true)
+        setIsSuccess(true);
         setTimeout(() => {
-            setIsSuccess(false)
-        }, 3000)
-        setIsSending(false)
-    }
-    const handleFail = () => {
-        setIsFail(true)
-        setTimeout(() => {
-            setIsFail(false)
-        }, 3000)
-        setIsSending(false)
-    }
+            setIsSuccess(false);
+        }, 3000);
+        setIsSending(false);
+    };
 
+    const handleFail = () => {
+        setIsFail(true);
+        setTimeout(() => {
+            setIsFail(false);
+        }, 3000);
+        setIsSending(false);
+    };
 
     const handleSubmit = () => {
-        if (!email || !name || !message) {
-            handleFail()
-            return
+        if (!values.reply_to || !values.from_name || !values.message) {
+            handleFail();
+            return;
         }
-        setIsSuccess(false)
-        setIsSending(true)
-        emailjs.sendForm("service_6dt2fbh", "template_6ezaths", "#email_form")
+        setIsSuccess(false);
+        setIsSending(true);
+        emailjs
+            .sendForm("service_6dt2fbh", "template_6ezaths", "#email_form")
             .then((res) => {
-                handleSuccess()
-                console.log('SUCCESS!', res.status, res.text);
+                handleSuccess();
+                console.log("SUCCESS!", res.status, res.text);
             })
             .catch((error) => {
-                handleFail()
-                console.log('FAILED...', error);
+                handleFail();
+                console.log("FAILED...", error);
             });
-    }
+    };
 
     return (
         <Container>
             <EmailForm
                 initial={{
                     opacity: 0,
-                    scale: .5
+                    scale: 0.5,
                 }}
                 animate={{
                     opacity: 1,
-                    scale: 1
-                }}>
+                    scale: 1,
+                }}
+            >
                 <FlexRow py={"1rem"}>
-                    <Heading>
-                        Contact Me
-                    </Heading>
+                    <Heading>Contact Me</Heading>
                 </FlexRow>
                 <form id="email_form">
                     <FlexColumn>
                         <Input
-                            onChange={(e) => setName(e.target.value)}
+                            onChange={(e) => onChange(e)}
                             type="text"
-                            value={name}
+                            value={values.from_name}
                             required
                             autoComplete="off"
                             placeholder="Your name"
                             name="from_name"
                             initial={{
-                                opacity: 0
+                                opacity: 0,
                             }}
                             animate={{
-                                opacity: 1
+                                opacity: 1,
                             }}
                             transition={{
-                                delay: .25,
-                                duration: .5
+                                delay: 0.25,
+                                duration: 0.5,
                             }}
                         />
                         <Input
-                            onChange={(e) => setEmail(e.target.value)}
+                            onChange={(e) => onChange(e)}
                             type="email"
-                            value={email}
+                            value={values.reply_to}
                             required
                             autoComplete="off"
                             placeholder="Your email"
                             name="reply_to"
                             initial={{
-                                opacity: 0
+                                opacity: 0,
                             }}
                             animate={{
-                                opacity: 1
+                                opacity: 1,
                             }}
                             transition={{
-                                delay: .5,
-                                duration: .5
+                                delay: 0.5,
+                                duration: 0.5,
                             }}
                         />
                         <TextArea
-                            onChange={(e) => setMessage(e.target.value)}
-                            value={message}
+                            onChange={(e) => onChange(e)}
+                            value={values.message}
                             required
                             autoComplete="off"
                             placeholder="Message"
                             name="message"
                             initial={{
-                                opacity: 0
+                                opacity: 0,
                             }}
                             animate={{
-                                opacity: 1
+                                opacity: 1,
                             }}
                             transition={{
-                                delay: .75,
-                                duration: .5
+                                delay: 0.75,
+                                duration: 0.5,
                             }}
                         />
                         <SubmitButton
@@ -127,14 +127,14 @@ const Contact: React.FC = () => {
                             onClick={handleSubmit}
                             disabled={isSending}
                             initial={{
-                                opacity: 0
+                                opacity: 0,
                             }}
                             animate={{
-                                opacity: 1
+                                opacity: 1,
                             }}
                             transition={{
                                 delay: 1.25,
-                                duration: .5
+                                duration: 0.5,
                             }}
                         />
                     </FlexColumn>
@@ -149,7 +149,7 @@ const Contact: React.FC = () => {
                 </Text>
             </FlexRow>
         </Container>
-    )
-}
+    );
+};
 
-export default Contact
+export default Contact;
