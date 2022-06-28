@@ -1,7 +1,7 @@
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Input from "../../components/Navbar/Input";
+import Input from "../../components/Input";
 import { useForm } from "../../hooks/useForm";
 import { FlexColumn, FlexRow, Heading, Text } from "../../styles";
 import { Container, EmailForm, SubmitButton, TextArea } from "./styles";

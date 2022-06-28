@@ -66,10 +66,10 @@ export const Label = styled.label`
 export const Error = styled.span`
     position: absolute;
     top: 90%;
-    right: 1.5rem;
+    right: 1rem;
     margin-left: 1rem;
     font-size: .75rem;
     font-weight: 600;
     text-align: right;
-    color: hsl(350 50% 50%);
+    color: hsl(350 75% 50%);
 `

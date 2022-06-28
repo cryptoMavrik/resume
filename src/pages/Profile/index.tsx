@@ -40,7 +40,7 @@ const Profile = () => {
                             opacity: 1
                         }}
                         transition={{
-                            delay: .5,
+                            delay: .25,
                             duration: .5
                         }}>
                         Passionate and performance-driven React developer with a strong emphasis on current and future blockchain technologies. Over 5 years of experience developing applications for EVM-like blockchains, and over 1 year exclusively developing Web3 React dapps.  Developer/Moderator for the Aquachain Foundation.
@@ -61,7 +61,7 @@ const Profile = () => {
                         transition={{
                             type: "spring",
                             duration: 1,
-                            delay: .25
+                            delay: .75
                         }}>
                         <Heading>
                             Skills
@@ -77,7 +77,7 @@ const Profile = () => {
                                 opacity: 1
                             }}
                             transition={{
-                                delay: 1,
+                                delay: 1.25,
                                 duration: .25
                             }}>
                             <FlexColumn alignItems={"flex-start"} justifyContent={"flex-start"}>

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { useForm } from '../../../hooks/useForm'
-import isEmail from '../../../utils/isEmail'
+import { useForm } from '../../hooks/useForm'
+import isEmail from '../../utils/isEmail'
 import { Container, Error, InputField, Label } from './styles'
 import { InputProps } from './types'
 
