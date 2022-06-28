@@ -7,7 +7,6 @@ export const Container = styled(motion.div)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: .5rem 0;
     width: 100%;
 `
 
@@ -44,12 +43,6 @@ export const InputField = styled.input`
     
     &:active { 
         outline: none;
-    }
-    &.error-input {
-        box-shadow: hsl(350 50% 50%);
-    }
-    &.error-input:focus:not(:disabled) {
-        box-shadow: hsl(350 50% 50%);
     }
 `
 export const Label = styled.label`

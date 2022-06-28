@@ -124,7 +124,7 @@ const Contact: React.FC = () => {
                         </motion.div>
                         <TextArea
                             onChange={(e) => onChange(e)}
-                            py={".5rem"}
+                            mt={"1rem"}
                             value={values.message}
                             required
                             autoComplete="off"

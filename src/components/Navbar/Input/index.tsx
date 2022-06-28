@@ -8,17 +8,6 @@ const Input: React.FC<InputProps> = ({ label, setError, ...rest }): JSX.Element 
     const [err, setErr] = useState<string>('')
     const inputRef = useRef<HTMLInputElement | null>(null)
 
-    const { onChange } = useForm()
-
-    useEffect(() => {
-        if (err) {
-            inputRef.current && inputRef.current.classList.add("error-input")
-        }
-        if (!err) {
-            inputRef.current && inputRef.current.classList.remove("error-input")
-        }
-    }, [err])
-
     const handleOnBlur = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.value) {
             inputRef.current && inputRef.current.classList.add("active")
