@@ -4,6 +4,7 @@ import { useState } from "react";
 import Input from "../../components/Input";
 import { useForm } from "../../hooks/useForm";
 import { FlexColumn, FlexRow, Heading, Text } from "../../styles";
+import isEmail from "../../utils/isEmail";
 import { Container, EmailForm, SubmitButton, TextArea } from "./styles";
 
 emailjs.init("NNsqFjJRMcWt4TsU7");
@@ -11,10 +12,9 @@ emailjs.init("NNsqFjJRMcWt4TsU7");
 const Contact: React.FC = () => {
     const [isSending, setIsSending] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
-    const [isError, setIsError] = useState(false)
     const [isFail, setIsFail] = useState(false);
 
-    const { values, setValues, onChange } = useForm();
+    const { values, setValues, onChange, error } = useForm();
 
     const handleSuccess = () => {
         setIsSuccess(true);
@@ -33,11 +33,11 @@ const Contact: React.FC = () => {
     };
 
     const handleSubmit = () => {
-        if (!values.reply_to || !values.from_name || !values.message) {
+        if (!values.reply_to || !values.from_name) {
             handleFail();
             return;
         }
-        if (isError) {
+        if (error) {
             handleFail()
             return
         }
@@ -50,16 +50,17 @@ const Contact: React.FC = () => {
                 handleSuccess();
                 console.log("SUCCESS!", res.status, res.text);
             })
-            .catch((error) => {
+            .catch((err) => {
                 handleFail();
-                console.log("FAILED...", error);
+                console.log("FAILED...", err);
             });
         setValues({
-            from_name: undefined,
-            reply_to: undefined,
-            message: undefined
+            from_name: "",
+            reply_to: "",
+            message: ""
         })
     };
+
 
     return (
         <Container>
@@ -89,15 +90,15 @@ const Contact: React.FC = () => {
                                 delay: 0.25,
                                 duration: 0.5,
                             }}>
-
                             <Input
-                                onChange={(e) => onChange(e)}
-                                setError={setIsError}
-                                value={values.from_name}
                                 required
                                 autoComplete="off"
                                 label="Name"
                                 name="from_name"
+                                value={values.from_name}
+                                onChange={(e) => {
+                                    onChange(e)
+                                }}
                             />
                         </motion.div>
                         <motion.div
@@ -113,23 +114,24 @@ const Contact: React.FC = () => {
                             }}>
 
                             <Input
-                                onChange={(e) => onChange(e)}
-                                setError={setIsError}
-                                value={values.reply_to}
                                 required
+                                value={values.reply_to}
                                 autoComplete="off"
                                 label="Email address"
                                 name="reply_to"
+                                onChange={(e) => {
+                                    onChange(e)
+                                }}
                             />
                         </motion.div>
                         <TextArea
-                            onChange={(e) => onChange(e)}
                             mt={"1rem"}
+                            name="message"
                             value={values.message}
                             required
                             autoComplete="off"
-                            placeholder="Message"
-                            name="message"
+                            placeholder="Message (optional)"
+                            onChange={(e) => onChange(e)}
                             initial={{
                                 opacity: 0,
                             }}
@@ -145,8 +147,7 @@ const Contact: React.FC = () => {
                             type="button"
                             value="Submit"
                             onClick={handleSubmit}
-                            // disabled={true}
-                            disabled={isSending || (!values.from_name || !values.reply_to)}
+                            disabled={isSending || !values.from_name || !isEmail(values.reply_to)}
                             initial={{
                                 opacity: 0,
                             }}

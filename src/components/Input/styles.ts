@@ -13,7 +13,7 @@ export const Container = styled(motion.div)`
 export const InputField = styled.input`
     background: hsl(0 0% 0% / .1);
     color: #f3f3f3;
-    border: 2px solid #a2a2a2;
+    border: 2px solid #a2a2a299;
     border-radius: 8px;
     width: 325px;
     padding: .5rem 1rem;
@@ -41,8 +41,9 @@ export const InputField = styled.input`
         left: 0rem;
     }
     
-    &:active { 
+    &:active, :focus { 
         outline: none;
+        border: 2px solid #a2a2a2;
     }
 `
 export const Label = styled.label`

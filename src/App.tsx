@@ -10,6 +10,7 @@ function App() {
   return (
     <NavMenu>
       <Routes>
+        <Route path="*" element={<Navigate to={"/profile"} />} />
         <Route path="/" element={<Navigate to={"/profile"} />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/portfolio" element={<Portfolio />} />

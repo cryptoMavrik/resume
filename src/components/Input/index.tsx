@@ -4,9 +4,14 @@ import isEmail from '../../utils/isEmail'
 import { Container, Error, InputField, Label } from './styles'
 import { InputProps } from './types'
 
-const Input: React.FC<InputProps> = ({ label, setError, ...rest }): JSX.Element => {
-    const [err, setErr] = useState<string>('')
+const Input: React.FC<InputProps> = ({ label, value, ...rest }): JSX.Element => {
+    const { error, setError } = useForm()
     const inputRef = useRef<HTMLInputElement | null>(null)
+
+    const config: { [name: string]: string } = {
+        "from_name": "Name",
+        "reply_to": "Email address"
+    }
 
     const handleOnBlur = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.value) {
@@ -15,32 +20,11 @@ const Input: React.FC<InputProps> = ({ label, setError, ...rest }): JSX.Element 
             inputRef.current && inputRef.current.classList.remove("active")
         }
         if (e.target.value.length === 0) {
-            setErr(`${label} must not be empty`)
-            setError(true)
+            setError(`${config[e.target.name]} must not be empty`)
         } else if (e.target.name === "reply_to" && !isEmail(e.target.value)) {
-            setError(true)
-            setErr(`Not a valid email address`)
+            setError(`Not a valid email address`)
         } else {
-            setError(false)
-            setErr("")
-        }
-    }
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        e.preventDefault()
-        setError(true)
-        if (isEmail(e.target.value)) {
-            setError(false)
-            setErr("")
-            if (e.target.value.length === 0) {
-                setErr(`${label} must not be empty`)
-                setError(true)
-            } else if (e.target.name === "reply_to" && !isEmail(e.target.value) && err) {
-                setError(true)
-                setErr(`${label} is not an address`)
-            } else {
-                setErr("")
-            }
+            setError("")
         }
     }
 
@@ -49,14 +33,12 @@ const Input: React.FC<InputProps> = ({ label, setError, ...rest }): JSX.Element 
             <Container>
                 <InputField
                     ref={inputRef}
+                    defaultValue={value}
                     onBlur={handleOnBlur}
-                    onChange={(e) => {
-                        handleChange(e)
-                    }}
                     {...rest}
                 />
                 <Label>{label}</Label>
-                {err && <Error>{err}</Error>}
+                {error && <Error>{error}</Error>}
             </Container>
         </>
     )

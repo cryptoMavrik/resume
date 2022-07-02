@@ -3,6 +3,7 @@ import { ContactFormType, FormReturnType } from "./types";
 
 export const useForm = (): FormReturnType => {
     const [values, setValues] = useState<ContactFormType>({});
+    const [error, setError] = useState<string>("")
 
     const onChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -11,5 +12,5 @@ export const useForm = (): FormReturnType => {
             [name]: value,
         });
     };
-    return { values, setValues, onChange };
+    return { values, setValues, onChange, error, setError };
 };

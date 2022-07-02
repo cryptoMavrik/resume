@@ -44,12 +44,17 @@ export const TextArea = styled(motion.textarea) <SpaceProps>`
     background: hsl(0 0% 0% / .25);
     font-family: "Roboto";
     color: #f3f3f3;
-    border: 2px solid #a2a2a2;
+    border: 2px solid #a2a2a299;
     border-radius: 8px;
     width: 100%;
     min-height: 10rem;
     padding: 1rem;
     margin: 1rem 0;
+
+    &:active, :focus { 
+        outline: none;
+        border: 2px solid #a2a2a2;
+    }
 
     ${space}
 `
