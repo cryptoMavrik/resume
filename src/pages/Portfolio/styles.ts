@@ -32,7 +32,8 @@ export const CardGrid = styled.div`
         grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
     }
-`
+    
+    `
 
 export const ImageWrapper = styled.div`
     background: linear-gradient(180deg, hsl(210 50% 75% / .15) 66%, hsl(0 0% 50% / .05));
@@ -45,26 +46,26 @@ export const ImageWrapper = styled.div`
     border-bottom: 2px solid hsl(0 0% 100% / .5);
     width: 100%;
     height: 100%;
-`
+    `
 
 export const CardImage = styled.img<{ width?: string }>`
     width: ${({ width }) => width ? width : "100%"};
     margin: auto;
     position: relative;
-`
+    `
 
 export const CardHeader = styled.div`
     font-size: 1.5rem;
     font-weight: 400;
     text-align: center;
     padding: .5rem;
-`;
+    `;
 
 export const CardBody = styled.div`
     font-size: 1rem;
     padding: 1rem .5rem;
     width: 100%;
-`;
+    `;
 
 export const PortfolioCard = styled(FlexColumn)`
     background: hsl(0 0% 0% / .25);
@@ -74,4 +75,9 @@ export const PortfolioCard = styled(FlexColumn)`
     /* border: 2px solid hsl(185 80% 70% / 0.4); */
     border-radius: 2rem;
     overflow: hidden;
-`;
+    transform: scale(1);
+    transition: transform 500ms;
+    &:hover {
+        transform: scale(1.1);
+    }
+    `;
