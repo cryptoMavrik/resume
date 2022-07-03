@@ -52,6 +52,11 @@ export const CardImage = styled.img<{ width?: string }>`
     width: ${({ width }) => width ? width : "100%"};
     margin: auto;
     position: relative;
+    transform: scale(1);
+    transition: transform 500ms;
+    &:hover {
+        transform: scale(1.2);
+    }
     `
 
 export const CardHeader = styled.div`
@@ -75,9 +80,4 @@ export const PortfolioCard = styled(FlexColumn)`
     /* border: 2px solid hsl(185 80% 70% / 0.4); */
     border-radius: 2rem;
     overflow: hidden;
-    transform: scale(1);
-    transition: transform 500ms;
-    &:hover {
-        transform: scale(1.1);
-    }
     `;
