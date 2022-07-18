@@ -70,13 +70,14 @@ export const Heading = styled(motion.h2) <
 `;
 
 export const Text = styled(motion.p) <
-  { scale?: "sm" | "md" | "lg", color?: string } & SpaceProps
+  { scale?: "sm" | "md" | "lg", color?: string, opacity?: string } & SpaceProps
   >`
   color: ${({ color }) => color ? color : "#dfdfdf"};
   font-size: ${({ scale }) =>
     scale === "sm" ? ".85rem" : scale === "lg" ? "1.25rem" : "1.1rem"};
   font-weight: 500;
   transition: opacity 250ms ease;
+  opacity: ${({ opacity }) => (opacity ? opacity : "1")};
 
   &:hover:not(:active) {
     opacity: 0.75;

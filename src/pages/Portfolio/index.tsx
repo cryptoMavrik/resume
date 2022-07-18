@@ -64,6 +64,14 @@ const Portfolio = () => {
                     )
                 })}
             </CardGrid>
+            <FlexRow pt={"3rem"}>
+                <Text scale="sm" opacity={".9"}>
+                    *All projects done with&nbsp;
+                    <a href="https://github.com/tsunamisystems" style={{ color: "#90ddc9" }}>
+                        Tsunami Systems
+                    </a>
+                </Text>
+            </FlexRow>
         </Container>
     )
 }
