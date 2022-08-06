@@ -10,12 +10,12 @@ export const skills1 = [
     "Hardhat",
     "tRPC",
     "Prisma",
-    "postgreSQL",
-    "mySQL",
     "GraphQL",
 ]
 
 export const skills2 = [
+    "postgreSQL",
+    "mySQL",
     "ERC20 Swap interface",
     "ERC721 Collections",
     "ERC721 Marketplace",
