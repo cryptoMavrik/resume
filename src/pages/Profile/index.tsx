@@ -43,7 +43,7 @@ const Profile = () => {
                             delay: .25,
                             duration: .5
                         }}>
-                        Passionate and performance-driven React developer with a strong emphasis on current and future blockchain technologies. Over 5 years of experience developing applications for EVM-like blockchains, and over 1 year exclusively developing Web3 React dapps.  Developer/Moderator for the Aquachain Foundation.
+                        Passionate and performance-driven React developer with a strong emphasis on current and future blockchain technologies. I have years of experience developing applications for EVM-like blockchains, and over 1 year exclusively developing Web3 React dapps.  Developer/Moderator for the Aquachain Foundation.
                     </Text>
                 </Header>
                 <Tilt tiltReverse scale={1.1} tiltMaxAngleX={10} tiltMaxAngleY={10}>
@@ -80,7 +80,7 @@ const Profile = () => {
                                 delay: 1.25,
                                 duration: .25
                             }}>
-                            <FlexColumn alignItems={"flex-start"} justifyContent={"flex-start"}>
+                            <FlexColumn alignItems={"flex-start"} justifyContent={"flex-start"} flexBasis={"75%"}>
                                 {skills1.map((el, index) => {
                                     return (
                                         <Text key={index}>
@@ -89,7 +89,7 @@ const Profile = () => {
                                     )
                                 })}
                             </FlexColumn>
-                            <FlexColumn alignItems={"flex-start"} justifyContent={"flex-start"}>
+                            <FlexColumn alignItems={"flex-start"} justifyContent={"flex-start"} flexBasis={"100%"}>
                                 {skills2.map((el, index) => {
                                     return (
                                         <Text key={index}>
